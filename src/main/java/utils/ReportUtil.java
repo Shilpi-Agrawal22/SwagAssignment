@@ -7,9 +7,7 @@ import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Author Vani Goyal, 2020
- */
+
 public class ReportUtil {
 
 	/**
