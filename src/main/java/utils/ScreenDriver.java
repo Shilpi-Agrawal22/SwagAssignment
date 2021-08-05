@@ -15,10 +15,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
-/**
- * Author
- * Vani Goyal, 2020
- */
+
 
 public class ScreenDriver {
     public static AppiumDriver driver;
