@@ -10,10 +10,6 @@ import org.testng.xml.XmlSuite;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Author
- * Vani Goyal, 2020
- */
 
 public class TestReportListener implements IReporter {
     @Override
