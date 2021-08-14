@@ -9,16 +9,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-
-
 public class WaitUtils {
     public final int explicitWaitDefault = 30; //15
 
-    /**
-     * This method is for static wait
-     *
-     * @param millis
-     */
+  
     public void staticWait(final long millis) {
         try {
             TimeUnit.MILLISECONDS.sleep(millis);
@@ -26,12 +20,7 @@ public class WaitUtils {
         }
     }
 
-    /**
-     * To wait for button to be clickable
-     *
-     * @param driver
-     * @param element
-     */
+   
     public void waitForElementToBeClickable(final WebElement
                                                     element, final WebDriver driver) {
         new WebDriverWait(driver, this.explicitWaitDefault)
