@@ -30,12 +30,7 @@ public class LoginPage {
 	public boolean isDisplayed() {
         return loginBtn.isDisplayed();
     }
-    public void typeName(String uname) {
-    	userField.sendKeys(uname);
-    }
-    public void typePassword(String password) {
-    	passwordField.sendKeys(password);
-    }
+    
     public void clickLogin() {
     	loginBtn.click();
     }
@@ -47,15 +42,59 @@ public class LoginPage {
     }*/
     public void login (String uname, String password) {
         //hideKeyboardIfVisible();
+    	System.out.println(uname);
         typeName(uname);
+        System.out.println(password);
         typePassword(password);
         clickLogin();
     }
-    
+    public void typeName(String uname) {
+    	userField.sendKeys(uname);
+    }
+    public void typePassword(String password) {
+    	passwordField.sendKeys(password);
+    }
     public String errMessage () {
         //hideKeyboardIfVisible();
     	return errMessageElement.getText();
     }
     
-	
+	/*
+	 * 
+    @Value("${login.btn}")
+    private String loginBtn;
+
+    @Value("${login.id}")
+    private String loginId;
+
+    @Value("${login.password}")
+    private String loginPassword;
+
+    @Value("${login.errorMessage}")
+    private String errorMessage;
+
+    @Value("${login.view}")
+    private String loginView;
+
+
+    public void enterLoinId(String id){
+        appDriverUtil.findByXpath(loginId).sendKeys(id);
+    }
+
+    public void enterLoinPassword(String id){
+        appDriverUtil.findByXpath(loginPassword).sendKeys(id);
+    }
+
+    public void clickLoginButton(){
+        appDriverUtil.findByXpath(loginBtn).click();
+    }
+
+    public boolean isErrorMessage() {
+        return appDriverUtil.waitForElementToAppear(errorMessage);
+    }
+
+    public String getErrorMessage() {
+       return appDriverUtil.findByXpath(errorMessage).getText();
+    }
+	 * */
 }

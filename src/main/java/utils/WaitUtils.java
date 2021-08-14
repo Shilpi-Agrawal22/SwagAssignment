@@ -9,10 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * Author
- * Vani Goyal, 2020
- */
+
 
 public class WaitUtils {
     public final int explicitWaitDefault = 30; //15

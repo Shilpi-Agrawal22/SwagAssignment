@@ -4,6 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="swag_app.Negative_TC2"/>
+       <class name="swag_app.NegativeLoginTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

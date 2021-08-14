@@ -11,9 +11,9 @@ import listeners.TestAllureScreenshotListener;
 import PageObjects.ProductPage;
 import PageObjects.LoginPage;
 import utils.AppiumServer;
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+//import io.qameta.allure.Description;
+//import io.qameta.allure.Severity;
+//import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.Listeners;
 
 
@@ -31,8 +31,8 @@ public class NegativeLoginTest extends TestBase {
  }
 
  @Test(priority = 1)
- @Description("Test Description: Verify login Screen UI with locked out User")
- @Severity(SeverityLevel.NORMAL)
+ //@Description("Test Description: Verify login Screen UI with locked out User")
+ //@Severity(SeverityLevel.NORMAL)
  public void TC01_verifyLoginUI() {
  LOGGER.info("************** Running test case : TC01_verifyLoginUI **************");
 

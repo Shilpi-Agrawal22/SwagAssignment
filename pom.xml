@@ -1,136 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+   <parent>
+      <groupId>ru.yandex.qatools.allure</groupId>
+      <artifactId>allure-examples-parent</artifactId>
+      <version>1.0</version>
+   </parent>
 
-  <groupId>swag_app</groupId>
-  <artifactId>Swag_APP_UI_Automation</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+   <groupId>org</groupId>
+   <artifactId>Automation</artifactId>
+   <version>1.0-SNAPSHOT</version>
 
-  <name>Swag_APP_UI_Automation</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-    
-     
+   <properties>
+      <aspectj.version>1.8.10</aspectj.version>
       <allure.version>2.13.9</allure.version>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <generex.version>1.0.2</generex.version>
       <jsonsimple.version>1.1.1</jsonsimple.version>
-  </properties>
+   </properties>
 
-  <dependencies>
-   
-    <dependency>
-    <groupId>io.appium</groupId>
-    <artifactId>java-client</artifactId>
-    <version>7.5.1</version>
-</dependency>
-  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
-</dependency>
-  <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.4.0</version>
-    <scope>test</scope>
-</dependency>
-<dependency>
-   <groupId>io.qameta.allure</groupId>
-   <artifactId>allure-testng</artifactId>
-   <version>2.14.0</version>
-   <scope>test</scope>
-</dependency>
+   <dependencies>
+      <dependency>
+         <groupId>io.appium</groupId>
+         <artifactId>java-client</artifactId>
+         <version>7.3.0</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+      <dependency>
+         <groupId>org.testng</groupId>
+         <artifactId>testng</artifactId>
+         <version>7.3.0</version>
+         <scope>compile</scope>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-java</artifactId>
+         <version>3.141.59</version>
+      </dependency>
+      <dependency>
+         <groupId>io.qameta.allure</groupId>
+         <artifactId>allure-testng</artifactId>
+         <version>2.14.0</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.aspectj</groupId>
+         <artifactId>aspectjweaver</artifactId>
+         <version>${aspectj.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>io.qameta.allure</groupId>
+         <artifactId>allure-java-commons</artifactId>
+         <version>2.14.0</version>
+         <scope>compile</scope>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+      <dependency>
+         <groupId>log4j</groupId>
+         <artifactId>log4j</artifactId>
+         <version>1.2.17</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+    
 
-<dependency>
-   <groupId>io.qameta.allure</groupId>
-   <artifactId>allure-java-commons</artifactId>
-   <version>2.14.0</version>
-   <scope>compile</scope>
-</dependency>
-<!-- https://mvnrepository.com/artifact/log4j/log4j -->
-<dependency>
-   <groupId>log4j</groupId>
-   <artifactId>log4j</artifactId>
-   <version>1.2.17</version>
-</dependency>
-
-
-<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-<dependency>
-   <groupId>com.fasterxml.jackson.core</groupId>
-   <artifactId>jackson-databind</artifactId>
-   <version>2.12.1</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.json/json -->
-<dependency>
-   <groupId>org.json</groupId>
-   <artifactId>json</artifactId>
-   <version>20201115</version>
-</dependency>
-<dependency>
-    <groupId>com.google.inject</groupId>
-    <artifactId>guice</artifactId>
-    <version>4.1.0</version>
-</dependency>
-
-  </dependencies>
-
-  <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-        <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
-          
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
+      <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+      <dependency>
+         <groupId>com.fasterxml.jackson.core</groupId>
+         <artifactId>jackson-databind</artifactId>
+         <version>2.12.1</version>
+      </dependency>
+      <dependency>
+         <groupId>io.rest-assured</groupId>
+         <artifactId>rest-assured</artifactId>
+         <version>4.3.3</version>
+         <scope>compile</scope>
+      </dependency>
      
-         
-        </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
-        </plugin>
-        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.7.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
+      <!-- https://mvnrepository.com/artifact/org.json/json -->
+      <dependency>
+         <groupId>org.json</groupId>
+         <artifactId>json</artifactId>
+         <version>20201115</version>
+      </dependency>
+      <dependency>
+         <groupId>com.github.mifmif</groupId>
+         <artifactId>generex</artifactId>
+         <version>${generex.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>com.googlecode.json-simple</groupId>
+         <artifactId>json-simple</artifactId>
+         <version>${jsonsimple.version}</version>
+      </dependency>
+      <dependency>
+            <groupId>com.vimalselvam</groupId>
+            <artifactId>cucumber-extentsreport</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+       
+		   <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>2.12.2</version>
+        </dependency>
+		<dependency>
+	         <groupId>junit</groupId>
+	         <artifactId>junit</artifactId>
+	         <version>4.4</version>
+	         <scope>test</scope>
+	      </dependency>
+  
+		<dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>1.2.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>1.2.2</version>
+            <type>pom</type>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm-deps</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+   </dependencies>
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.2</version>
+            <configuration>
+               <suiteXmlFiles>
+                  <!-- <suiteXmlFile>resources/testng_api.xml</suiteXmlFile> -->
+                  <suiteXmlFile>${TestNG.xml}</suiteXmlFile>
+               </suiteXmlFiles>
+               <argLine>
+                  -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+               </argLine>
+            </configuration>
+            <dependencies>
+               <dependency>
+                  <groupId>org.aspectj</groupId>
+                  <artifactId>aspectjweaver</artifactId>
+                  <version>${aspectj.version}</version>
+               </dependency>
+            </dependencies>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+               <source>8</source>
+               <target>8</target>
+            </configuration>
+         </plugin>
       </plugins>
-    </pluginManagement>
-  </build>
+   </build>
 </project>

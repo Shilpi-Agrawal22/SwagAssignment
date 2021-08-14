@@ -7,14 +7,10 @@ import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Author Vani Goyal, 2020
- */
+
 public class ReportUtil {
 
-	/**
-	 * This method is for creating timebased report folder
-	 */
+	
 	public void moveReport() {
 		String path1 = System.getProperty("user.dir") + "/Reports";
 		String path3 = System.getProperty("user.dir") + "/allure-results";
@@ -42,10 +38,6 @@ public class ReportUtil {
 			e.printStackTrace();
 		}
 
-		/*
-		 * //delete contents of allure results after copying try {
-		 * FileUtils.deleteDirectory(new File(path3)); } catch (IOException e) {
-		 * e.printStackTrace(); }
-		 */
+	
 	}
 }
