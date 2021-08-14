@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Aug 14 22:42:26 GST 2021</td>
+<td>Started on:</td><td>Sat Aug 14 23:24:43 GST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>26 seconds (26768 ms)</td>
+<tr><td>Total time:</td><td>81 seconds (81073 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,22 +76,46 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testRunner.TestRunner.run_cukes()'><b>run_cukes</b><br>Test class: testRunner.TestRunner<br>Test method: Runs Cucumber Features<br/>
-<a href="#Output-1226616812" onClick='toggleBox("Output-1226616812", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2325213" onClick='toggleBox("Output-2325213", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1226616812" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1226616812">
+<a href="#Output-2325213" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2325213">
+<div "featureFile">Feature File: Login.feature</div><br/>
+<div "feature">Feature: Login To Application Want to check various functionalities on Swag search products</div><br/>
+<div "scenarioOutline">Scenario Outline: Verification Of Login with Invalid Credential</div><br/>
+<div "scenario">Scenario Outline: Verification Of Login with Invalid Credential</div><br/>
+<div "result">Given  Launch the Application (passed : 19s)</div><br/>
+<div "result">When  Enter credentials username as &quot;&lt;UserName&gt;&quot; and password as &quot;&lt;Password&gt;&quot; and login application (passed : 2s)</div><br/>
+<div "result">Then  An error message should be dsiplayed for invalid credentials (passed : 0s)</div><br/>
+<div "result">And  Verify the Error message &lt;ErrorMessage&gt; (passed : 0s)</div><br/>
 <div "featureFile">Feature File: ProductCheckout.feature</div><br/>
 <div "feature">Feature: Check product checkout functionality</div><br/>
 <div "scenarioOutline">Scenario Outline: Check the search functionality</div><br/>
-<div "result">Given  Already registered customer (passed : 16s)</div><br/>
-<div "result">When  Search Product &lt;Product&gt; in the list of Product displayed on Product screen and Click on ADD TO CART (passed : 2s)</div><br/>
-<div "result">And  Click Cart Button (passed : 1s)</div><br/>
+<div "result">Given  Launch the Application (passed : 16s)</div><br/>
+<div "result">When  Enter credentials username as &quot;locked_out_user&quot; and password as &quot;secret_sauce&quot; and login application (passed : 2s)</div><br/>
+<div "result">Then  An error message should be dsiplayed for invalid credentials (passed : 1s)</div><br/>
 <div "scenario">Scenario Outline: Check the search functionality</div><br/>
-<div "result">And  Click on REMOVE button on Your Cart Page (passed : 0s)</div><br/>
-<div "result">Then  Verify Checkout Button should be disabled (passed : 1s)</div><br/>
-<div "result">Given  Launch the Application (passed : 0s)</div><br/>
+<div "result">And  Verify the Error message Sorry, this user has been locked out. (passed : 0s)</div><br/>
+<div "result">Given  Already registered customer (passed : 1s)</div><br/>
+<div "result">When  Search Product &lt;Product&gt; in the list of Product displayed on Product screen and Click on ADD TO CART (passed : 0s)</div><br/>
+<div "result">And  Click Cart Button (passed : 1s)</div><br/>
+<div "result">Then  User must be re-directed to the product description page (passed : 0s)</div><br/>
+<div "result">And  Click the CHECKOUT button (passed : 4s)</div><br/>
+<div "result">And  Enter Checkout Information &lt;FIRST NAME&gt;, &lt;LAST NAME&gt;, &lt;ZIP CODE&gt; (passed : 0s)</div><br/>
+<div "result">And  Click Continue Button (passed : 0s)</div><br/>
+<div "result">And  Checkout Overview Screen is dispalyed (passed : 0s)</div><br/>
+<div "result">And  Product &lt;Product&gt; is displayed (passed : 4s)</div><br/>
+<div "result">And  Click on Finish Button (passed : 0s)</div><br/>
+<div "scenarioOutline">Scenario Outline: Check the search functionality</div><br/>
+<div "result">And  Checkout Complete Screen is dispalyed (passed : 16s)</div><br/>
+<div "result">Given  Launch the Application (passed : 1s)</div><br/>
 <div "result">When  Enter credentials username as &quot;standard_user&quot; and password as &quot;secret_sauce&quot; and login application (passed : 1s)</div><br/>
-<div "result">Then  User should be successfully logged in (failed : 0s)</div><br/>
+<div "scenario">Scenario Outline: Check the search functionality</div><br/>
+<div "result">Then  User should be successfully logged in (passed : 0s)</div><br/>
+<div "result">Given  Already registered customer (passed : 1s)</div><br/>
+<div "result">When  Search Product Sauce Labs Bike Light in the list of Product displayed on Product screen and Click on ADD TO CART (passed : 0s)</div><br/>
+<div "result">And  Click Cart Button (passed : 1s)</div><br/>
+<div "result">Then  User must be re-directed to the product description page (failed : 0s)</div><br/>
 </div>
 </td>
 <td><div><pre>cucumber.runtime.CucumberException: java.lang.AssertionError: expected [false] but found [true]
@@ -136,8 +160,8 @@ Caused by: java.lang.AssertionError: expected [false] but found [true]
 	at PageObjects.CheckoutPage.verifyCheckOutButtonDisabled(CheckoutPage.java:50)
 	at stepDefinations.ProductCheckoutStepDef.verify_checkout_button_should_be_disabled(ProductCheckoutStepDef.java:145)
 	at ?.Then Verify Checkout Button should be disabled(ProductCheckout.feature:42)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1226616812", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1226616812'><pre>cucumber.runtime.CucumberException: java.lang.AssertionError: expected [false] but found [true]
+</pre></div><a href='#' onClick='toggleBox("stack-trace2325213", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2325213'><pre>cucumber.runtime.CucumberException: java.lang.AssertionError: expected [false] but found [true]
 	at cucumber.api.testng.TestNGCucumberRunner.runCukes(TestNGCucumberRunner.java:48)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.run_cukes(AbstractTestNGCucumberTests.java:14)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -180,7 +204,7 @@ Caused by: java.lang.AssertionError: expected [false] but found [true]
 	at stepDefinations.ProductCheckoutStepDef.verify_checkout_button_should_be_disabled(ProductCheckoutStepDef.java:145)
 	at ?.Then Verify Checkout Button should be disabled(ProductCheckout.feature:42)
 </pre></div></td>
-<td>26</td>
+<td>80</td>
 <td>testRunner.TestRunner@6e106680</td></tr>
 </table><p>
 </body>
