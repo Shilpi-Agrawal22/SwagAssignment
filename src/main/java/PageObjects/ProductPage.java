@@ -35,107 +35,61 @@ public class ProductPage {
 	public WebElement ZipCodeElement;
 	@AndroidFindBy(accessibility="test-FINISH")
 	public WebElement finishElement;
+	
+	/*************************/
+	@AndroidFindBy(accessibility="test-Cart drop zone")
+	public WebElement productPageParentObj;
+	/*****/
+	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"PRODUCTS\"]")
 	public WebElement productPageHeader;
+	/*******************/
+	 @AndroidFindBy(className="android.widget.TextView")
+	public WebElement productPageproductHeader;
+	 /******/
 	//driver.findElementsByXPath("(//android.widget.TextView[@content-desc=\"test-Item title\"])").size();
 	@AndroidFindBy(xpath="(//android.widget.TextView[@content-desc=\"test-Item title\"])")
 	public List<WebElement> productElements;
-	//driver.findElementsByXPath("//android.view.ViewGroup[@content-desc=\"test-ADD TO CART\"]");
-	@AndroidFindBy(xpath="//android.view.ViewGroup[@content-desc=\"test-ADD TO CART\"]")
+	
+	@AndroidFindBy(accessibility="test-Item title")
+	public List<WebElement> productElements3;
+	/*************************/
+	@AndroidFindBy(accessibility="test-PRODUCTS")
+	public List<WebElement> productElements2;
+	/*************************/
+	
+	@AndroidFindBy(accessibility="test-ADD TO CART")
 	public List<WebElement> productAddToCartElements;
-	//driver.findElementsByXPath("android.widget.TextView[@content-desc=\"test-Price\"]")
-	@AndroidFindBy(xpath="android.widget.TextView[@content-desc=\"test-Price\"]")
+	
+	@AndroidFindBy(accessibility="test-Price")
 	public List<WebElement> productPriceElements;
-	//driver.findElementByXPath("//android.view.ViewGroup[@content-desc='test-Cart']")
-	@AndroidFindBy(xpath="//android.view.ViewGroup[@content-desc='test-Cart']")
+	
+	@AndroidFindBy(accessibility="test-Cart")
 	public WebElement productCartEle;
-	//driver.findElementByXPath("//android.view.ViewGroup[@content-desc=\"test-Description\"]")
+	
+	
+	
+	@AndroidFindBy(xpath="//android.view.ViewGroup[@content-desc='test-Cart']")
+	public WebElement productCartEle2;
+
+	@AndroidFindBy(xpath="//android.view.ViewGroup[@content-desc=\"test-ADD TO CART\"]")
+	public List<WebElement> productAddToCartElements2;
+	
+
+	@AndroidFindBy(xpath="android.widget.TextView[@content-desc=\"test-Price\"]")
+	public List<WebElement> productPriceElements2;
+	
+
 	@AndroidFindBy(xpath="//android.view.ViewGroup[@content-desc=\"test-Description\"]")
 	public WebElement productTestDescriptionEle;
+	
 	//@AndroidFindAll(priority=, value = { @AndroidBy })
 	//public WebElement productPageElement;
 	public void verifySuccessfulLogin () {
         System.out.println("implement Login successful");
         Assert.assertTrue(productPageHeader.isDisplayed());
     }
-	/* @Autowired
-	    private ContextData contextData;
-
-	    @Value("${product-cartItem}")
-	    private String productInCart;
-
-	    @Value("${product-itemList}")
-	    private String productItemList;
-
-	    @Value("${product-price}")
-	    private String productPrice;
-
-	    @Value("${product-title}")
-	    private String productTitle;
-
-	    @Value("${product-addToCart}")
-	    private String productAddToCart;
-
-	    @Value("${product-remove}")
-	    private String productRemove;
-
-
-
-
-	    private  WebElement addProductEle(WebElement parentEle){
-	        return   parentEle.findElement(By.xpath(productAddToCart));
-	    }
-
-	    private  WebElement removeProductEle(WebElement parentEle){
-	        return   parentEle.findElement(By.xpath(productRemove));
-	    }
-
-	    private WebElement getProductPriceEle(WebElement parentEle){
-	       return parentEle.findElement(By.xpath(productPrice));
-	    }
-
-	    private WebElement getProductTitleEle(WebElement parentEle){
-	        return parentEle.findElement(By.xpath(productTitle));
-	    }
-
-	    private List<WebElement> getProductListEle(){
-	        return appDriverUtil.findElementListByXpath(productItemList);
-	    }
-
-
-	    public void saveFirstProductPrice(String conVar) {
-	       WebElement webElement = getProductListEle().get(0);
-	       String prodPrice = getProductPriceEle(webElement).getText();
-	       contextData.setContextValue(conVar,prodPrice);
-	    }
-
-	    public void saveFirstProductTitle(String conVar) {
-	        WebElement webElement = getProductListEle().get(0);
-	        String prodTitle = getProductTitleEle(webElement).getText();
-	        contextData.setContextValue(conVar,prodTitle);
-	    }
-
-	    public void selectFirstItem() {
-	        WebElement webElement = getProductListEle().get(0);
-	        addProductEle(webElement).click();
-	    }
-
-	    public void removeProductFromCart() {
-	        WebElement webElement = getProductListEle().get(0);
-	        removeProductEle(webElement).click();
-	    }
-
-	    public void waitForProductView() {
-	        Assertions.assertThat(appDriverUtil.waitForElementToAppear(productInCart)).isEqualTo(true);
-	    }
-
-	    public void cartHaveOneProduct() {
-	       Assertions.assertThat(appDriverUtil.findByXpath(productInCart).findElement(By.xpath("//android.widget.TextView")).getText()).isEqualTo("1");
-	    }
-
-	    public void cartHaveNoProduct() {
-	        Assertions.assertThat(appDriverUtil.findByXpath(productInCart).findElements(By.xpath("//android.widget.TextView")).size()).isEqualTo(0);
-	    }*/
+	
 	
 
 	

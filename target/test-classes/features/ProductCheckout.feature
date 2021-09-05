@@ -15,7 +15,7 @@ Feature: Check product checkout functionality
      When Enter credentials username as "standard_user" and password as "secret_sauce" and login application
     Then User should be successfully logged in
     
-  @smoke
+@regression
   Scenario Outline: Check the search functionality
   Given Already registered customer
     When Search Product <Product> in the list of Product displayed on Product screen and Click on ADD TO CART
@@ -33,7 +33,8 @@ Feature: Check product checkout functionality
     | standard_user|secret_sauce|Sauce Labs Bike Light| Shilpi|Agrawal|4353663|
  
  #Defect Checkout Button should be disabled after Removing the Added Product in cart but we are able to complete checkout
-@regression
+
+  @smoke
   Scenario Outline: Check the search functionality
   Given Already registered customer
     When Search Product <Product> in the list of Product displayed on Product screen and Click on ADD TO CART

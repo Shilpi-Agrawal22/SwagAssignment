@@ -52,7 +52,8 @@ public class LoginStepDef extends TestBase {
 	    @Then("^An error message should be dsiplayed for invalid credentials$")
 	    public void an_error_message_should_be_dsiplayed_for_invalid_credentials() throws Throwable {
 	    	//loginPage = new LoginPage(driver);
-	    	actualErrMessage= loginPage.errMessage();
+	    	//actualErrMessage= loginPage.errMessage();
+	    	actualErrMessage= loginPage.getErrorMessage();
 	     	System.out.print("Error message is coming when entering locked username password are entered"+actualErrMessage);
 	    }
 

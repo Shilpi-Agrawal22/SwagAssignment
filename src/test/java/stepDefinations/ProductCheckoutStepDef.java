@@ -46,6 +46,8 @@ public class ProductCheckoutStepDef extends TestBase {
     @When("^Search Product (.+) in the list of Product displayed on Product screen and Click on ADD TO CART$")
     public void search_product_in_the_list_of_product_displayed_on_product_screen(String product) throws Throwable {
     	int count= productPage.productElements.size();
+    	
+    	
 		System.out.print(count);
 		for(int i=0;i<count;i++)
 	    {

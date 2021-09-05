@@ -22,7 +22,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		dryRun = false, // check all the steps have the definitions and will not execute
 		strict = true, // check if any step is not defined in step definition file
 		//tags="@smoke"
-		tags={"@smoke, @regression"}
+		tags={"@regression,@smoke"}
+		 
 		)
 
 

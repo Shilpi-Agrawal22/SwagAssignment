@@ -38,7 +38,7 @@ public class NegativeLoginTest extends TestBase {
 
  	loginPage.login(rp.readTestData("invalidLoginId"),rp.readTestData("password"));
 
- 	String errMessage= loginPage.errMessage();
+ 	String errMessage= loginPage.getErrorMessage();
  	System.out.print("Error message is coming when entering locked username password are entered"+errMessage);
  	Assert.assertEquals(errMessage,"Sorry, this user has been locked out.");
  	

@@ -19,7 +19,7 @@ public class CheckoutPage {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	//driver.findElements(By.id("com.androidsample.generalstore:id/productPrice"))
+
 	@AndroidFindBy(id="com.androidsample.generalstore:id/productPrice")
 	public List<WebElement> productLists;
 	@AndroidFindBy(accessibility="test-First Name")
@@ -36,8 +36,7 @@ public class CheckoutPage {
 	public WebElement checkoutElement;
 	@AndroidFindBy(accessibility="test-REMOVE")
 	public WebElement chkRemoveElement;
-	//driver.findElementByXPath("//android.widget.ScrollView[@content-desc=\"test-CHECKOUT: COMPLETE!\"]")
-	//driver.findElementByXPath("//android.widget.TextView[@text=\"CHECKOUT: COMPLETE!\"]")
+
 	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"CHECKOUT: COMPLETE!\"]")
 	public WebElement checkoutCompleteMesEle;
 	

@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -24,12 +25,20 @@ public class LoginPage {
 	public WebElement passwordField;
 	@AndroidFindBy(accessibility="test-LOGIN")
 	public WebElement loginBtn;
+	/*INstead of Xpath used Accessiblity ID Obsolute*/
 	@AndroidFindBy(xpath="//android.view.ViewGroup[@content-desc='test-Error message']/android.widget.TextView")
+	public WebElement errMessageElement2;
+	
+	@AndroidFindBy(accessibility="test-Error message")
 	public WebElement errMessageElement;
 	
 	public boolean isDisplayed() {
         return loginBtn.isDisplayed();
     }
+	public String getErrorMessage() {
+        return errMessageElement.findElement(By.className("android.widget.TextView")).getText();
+    }
+	
     
     public void clickLogin() {
     	loginBtn.click();
@@ -59,42 +68,5 @@ public class LoginPage {
     	return errMessageElement.getText();
     }
     
-	/*
-	 * 
-    @Value("${login.btn}")
-    private String loginBtn;
-
-    @Value("${login.id}")
-    private String loginId;
-
-    @Value("${login.password}")
-    private String loginPassword;
-
-    @Value("${login.errorMessage}")
-    private String errorMessage;
-
-    @Value("${login.view}")
-    private String loginView;
-
-
-    public void enterLoinId(String id){
-        appDriverUtil.findByXpath(loginId).sendKeys(id);
-    }
-
-    public void enterLoinPassword(String id){
-        appDriverUtil.findByXpath(loginPassword).sendKeys(id);
-    }
-
-    public void clickLoginButton(){
-        appDriverUtil.findByXpath(loginBtn).click();
-    }
-
-    public boolean isErrorMessage() {
-        return appDriverUtil.waitForElementToAppear(errorMessage);
-    }
-
-    public String getErrorMessage() {
-       return appDriverUtil.findByXpath(errorMessage).getText();
-    }
-	 * */
+	
 }
