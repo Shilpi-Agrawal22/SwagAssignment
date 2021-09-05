@@ -54,9 +54,9 @@ $ mvn clean test
 To get Allure results
 $ allure serve target/allure-results
 
-Limitation of Project:
+Scope of Improvement of Project:
 1. After approach decided, Either Cucumber or Normal Test Framewok should be implemented
 2. Can do more optimization of code/Reuse the Generic functions
 3. Object implementaion could be more improvised used xpath as some of objects can't be find by using other properties and  used classpath to make xpath more reliable. FindByAll could be used to make more properties all together and to work in different environment.
 4. Could be used hooks 
-5. Logging could be given instead of System.out.println.
+
